@@ -1,0 +1,190 @@
+:root {}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+
+}
+
+.card {
+    margin: 100px auto 0;
+    width: 400px;
+    height: 600px;
+    perspective: 1000px;
+}
+
+.cardInner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.cardInner.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.cardFace {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.cardFaceFront {
+    /* display: inline-block;
+    align-items: center;
+    justify-content: center; */
+}
+
+.cardFaceFront img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: all linear 0.8s;
+}
+
+.hoverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.cardContentFront:hover img {
+    opacity: 0;
+}
+
+.cardContentFront:hover img.hoverImage {
+    opacity: 1;
+}
+
+.cardFaceBack {
+    transform: rotateY(180deg);
+}
+
+.cardFaceBack {
+    /* display: inline-block;
+    align-items: center;
+    justify-content: center; */
+}
+
+.cardFaceBack img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: 0.8s;
+}
+
+.hoverFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+
+.cardContentBack:hover img {
+    opacity: 0;
+}
+
+.cardContentBack:hover .hoverFrame {
+    opacity: 1;
+}
+
+
+.cardFaceBack {
+    transform: rotateY(180deg);
+}
+
+.links ul li {}
+
+
+
+/* .cardImageFront {
+    max-height: 100%;
+    content: url("/images/bw_tarot.png");
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+}
+
+
+.cardImageFront:after {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    content: url("/images/color_tarot.png");
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+}
+
+.cardImageFront:hover:after {
+    opacity: 1;
+}
+
+.cardImageFront:hover:before {
+    opacity: 0;
+} */
+
+/* .cardFaceBack {
+    transform: rotateY(180deg);
+}
+
+.cardContent {
+    width: 100%;
+    height: 100%;
+}
+
+.imageFront:before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    max-width: 50px;
+    content: url("/images/bw_tarot.png");
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+}
+
+.imageFront:after {
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    content: url("/images/color_tarot.png");
+    transition: opacity 0.5s ease;
+    -webkit-transition: opacity 0.5s ease;
+}
+
+.imageFront:hover:after {
+    opacity: 1;
+}
+
+.imageFront:hover:before {
+    opacity: 0;
+}
+
+.cardImage {
+    max-height: 100%;
+    /* object-fit: cover; */
+
+/* }
+
+.cardImage:hover {
+    transition: 5ms;
+
+} */
