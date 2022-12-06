@@ -1,0 +1,51 @@
+}
+
+.cardFaceBack {
+    /* display: inline-block;
+    align-items: center;
+    justify-content: center; */
+}
+
+.cardFaceBack img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: all linear 0.8s;
+}
+
+.hoverFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+
+.cardContentBack:hover img {
+    opacity: 0;
+}
+
+.cardContentBack:hover .hoverFrame {
+    opacity: 1;
+}
+
+.cardFaceFront img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: all linear 0.8s;
+}
+
+.hoverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.cardFace {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
