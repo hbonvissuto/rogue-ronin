@@ -15,28 +15,31 @@ body {
     padding-top: 2rem;
     padding-bottom: 2rem;
     box-sizing: border-box;
+
 }
 
-.scene {
+.card {
     margin: 100px auto 0;
     width: 400px;
     height: 600px;
     perspective: 1000px;
 }
 
-.card {
+.cardInner {
     width: 100%;
     height: 100%;
-    position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
+    cursor: pointer;
+    position: absolute;
+}
 
+.cardInner.is-flipped {
+    transform: rotateY(180deg);
 }
 
 .cardFace {
     position: absolute;
-    height: 100%;
-    width: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     overflow: hidden;
@@ -44,31 +47,44 @@ body {
     box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
 }
 
-.cardFaceFront {
-    background-image: url("/images/bw_tarot.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: all linear .7s;
+/* .cardContentFront {
+    background-image: url("/images/bw_frame.png");
+    background-size: 100%;
+    aspect-ratio: auto 837 / 1289;
+} */
+
+.cardFaceFront img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: all linear 0.8s;
+}
+
+.hoverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
 }
 
 .cardFaceBack {
-    background-image: url("/images/bw_frame.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    transform: rotateY(180deg);
-    transition: all linear .7s;
-}
-
-
-.card.is-flipped {
     transform: rotateY(180deg);
 }
 
 
-.cardFaceFront:hover {
-    background-image: url("/images/color_tarot.png");
+.cardFaceBack img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: 0.8s;
 }
 
-.cardFaceBack:hover {
-    background-image: url("/images/color_frame.png");
+.hoverFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.cardFaceBack {
+    transform: rotateY(180deg);
 }
