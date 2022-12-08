@@ -1,4 +1,4 @@
-:root {}
+/* :root {} */
 
 * {
     margin: 0;
@@ -48,7 +48,7 @@ body {
     background-image: url("/images/bw_tarot.png");
     background-size: contain;
     background-repeat: no-repeat;
-    transition: all linear .7s;
+    transition: all linear .6s;
 }
 
 .cardFaceBack {
@@ -56,7 +56,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     transform: rotateY(180deg);
-    transition: all linear .7s;
+    transition: all linear .6s;
 }
 
 
@@ -71,4 +71,11 @@ body {
 
 .cardFaceBack:hover {
     background-image: url("/images/color_frame.png");
+}
+
+.cardContentBack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px
 }
