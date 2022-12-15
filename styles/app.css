@@ -17,6 +17,16 @@ body {
     box-sizing: border-box;
 }
 
+body.bg-black {
+    background-color: black;
+    transition: ease-in-out .8s;
+}
+
+body.bg-white {
+    background-color: white;
+    transition: ease-in-out .8s;
+}
+
 .scene {
     margin: 100px auto 0;
     width: 400px;
@@ -31,6 +41,7 @@ body {
     transition: transform 1s;
     transform-style: preserve-3d;
 
+
 }
 
 .cardFace {
@@ -42,11 +53,13 @@ body {
     overflow: hidden;
     border-radius: 16px;
     box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+    background-color: white;
 }
 
 .cardFaceFront {
     background-image: url("/images/bw_tarot.png");
     background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
     transition: all linear .6s;
 }
@@ -54,6 +67,7 @@ body {
 .cardFaceBack {
     background-image: url("/images/bw_frame.png");
     background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
     transform: rotateY(180deg);
     transition: all linear .6s;
@@ -69,6 +83,7 @@ body {
     background-image: url("/images/color_tarot.png");
 }
 
+
 .cardFaceBack:hover {
     background-image: url("/images/color_frame.png");
 }
@@ -77,5 +92,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px
+    margin-top: 200px;
+
+}
+
+.cardContentBack ul {
+    font-family: "Niagra Engraved", serif;
+    font-size: 3em;
+    font-kerning: normal;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+.cardContentBack ul li:hover {
+    letter-spacing: .5rem;
+    transition: ease-in-out .2s;
 }

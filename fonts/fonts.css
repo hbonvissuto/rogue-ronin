@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Niagra";
+    src: url('/fonts/Niagra.otf');
+}
+
+@font-face {
+    font-family: "Niagra Engraved";
+    src: url('/fonts/Niagra\ Engraved.otf');
+}
+
+@font-face {
+    font-family: "Niagra Engraved Light";
+    src: url('/fonts/Niagra\ Engraved\ Light.otf');
+}
